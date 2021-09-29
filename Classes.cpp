@@ -1,55 +1,7 @@
-#include<iostream>
 #include<locale.h>
-using namespace std;
+#include"Classes.h"
 
-class Classes {
-	string NmClasse = ""; 								// - Nome da classe
-	int CdClasse = 0; 									// - Código da Classe
-	int BPinicial = 2;									// - Numero do Bonus de Proficiencia Inicial
-	string TesteResistencia = "";						// - Tipo de resistencia inicial por tipo de classe
-	//int DadoVida;									
-	//PvNiveisPosteriores
-	
-	public:
-		/* Nome da Classe */
-		void set_NmClasse(string name) {
-			NmClasse = name;
-		}
-		
-		string get_NmClasse() {
-			return NmClasse;
-		}
-		
-		/* Código da Classe */
-		void set_CdClasse(int codigo) {
-			CdClasse = codigo;
-		}
-		
-		int get_CdClasse() {
-			return CdClasse;
-		}
-		/* Bônus de PRoficiência Inicial */
-		int get_BPinicial() {
-			return BPinicial;
-		}
-		
-		/* Resistências */
-		void set_TesteResistencia(string resistencia) {
-			TesteResistencia = resistencia;
-		}
-		
-		string get_TesteResistencia() {
-			return TesteResistencia;
-		}
-		
-		
-		CoutDefineClasse();
-		system("clear");
-		definirClassePersonagem(CdClasse);
-		
-};
-
-void CoutDefineClasse() {
+int coutDefineClasse() {
 	setlocale(LC_ALL, "Portuguese");
 	cout << "Bem vindo ?jogador?" <<endl; // decidimos dps
 	cout << "Está na hora de voce escolher a classe do seu personagem."
@@ -86,107 +38,107 @@ void CoutDefineClasse() {
 	}
 	
 	else {
-		Classes personagem;
-		personagem.set_CdClasse(varClasse);
+		return varClasse;
 	}
 }
 
 void definirClassePersonagem(int CdClasse) {
 	Classes personagem;
+	personagem.set_BPinicial(2);
 	
 	switch(CdClasse) {
 		case 1: 
 			personagem.set_NmClasse("Bárbaro");
-			personagem.set_TesteResistencia("Força" + "\n" + "Constituição");
-			cout << "O seu personagem é um Bárbaro."
+			personagem.set_TesteResistencia("Força""\n""Constituição");
+			cout << "O seu personagem é um Bárbaro.";
 			/* Parte de couts que definirão as carcterísticas do personagem
 			*/
 			break;
 				
 		case 2:
 			personagem.set_NmClasse("Bardo");
-			personagem.set_TesteResistencia("Destreza" + "\n" + "Carisma");
-			cout << "O seu personagem é um Bardo."
+			personagem.set_TesteResistencia("Destreza""\n""Carisma");
+			cout << "O seu personagem é um Bardo.";
 			/* Parte de couts que definirão as carcterísticas do personagem
 			*/
 			break;
 				
 		case 3: 
 			personagem.set_NmClasse("Clérigo");
-			personagem.set_TesteResistencia("Sabedoria" + "\n" + "Carisma");
-			cout << "O seu personagem é um Clérigo."
+			personagem.set_TesteResistencia("Sabedoria""\n""Carisma");
+			cout << "O seu personagem é um Clérigo.";
 			/* Parte de couts que definirão as carcterísticas do personagem
 			*/
 			break;
 			
 		case 4: 
 			personagem.set_NmClasse("Druida");
-			personagem.set_TesteResistencia("Inteligência" + "\n" + "Sabedoria");
-			cout << "O seu personagem é um Druida."
+			personagem.set_TesteResistencia("Inteligência""\n""Sabedoria");
+			cout << "O seu personagem é um Druida.";
 			/* Parte de couts que definirão as carcterísticas do personagem
 			*/
 			break;
 			
 		case 5: 
 			personagem.set_NmClasse("Guerreiro");
-			personagem.set_TesteResistencia("Força" + "\n" + "Constituição");
-			cout << "O seu personagem é um Guerreiro."
+			personagem.set_TesteResistencia("Força""\n""Constituição");
+			cout << "O seu personagem é um Guerreiro.";
 			/* Parte de couts que definirão as carcterísticas do personagem
 			*/
 			break;
 			
 		case 6: 
 			personagem.set_NmClasse("Monge");
-			personagem.set_TesteResistencia("Força" + "\n" + "Destreza");
-			cout << "O seu personagem é um Monge."
+			personagem.set_TesteResistencia("Força""\n""Destreza");
+			cout << "O seu personagem é um Monge.";
 			/* Parte de couts que definirão as carcterísticas do personagem
 			*/
 			break;
 		
 		case 7: 
 			personagem.set_NmClasse("Paladino");
-			personagem.set_TesteResistencia("Sabedoria" + "\n" + "Carisma");
-			cout << "O seu personagem é um Paladino."
+			personagem.set_TesteResistencia("Sabedoria""\n""Carisma");
+			cout << "O seu personagem é um Paladino.";
 			/* Parte de couts que definirão as carcterísticas do personagem
 			*/
 			break;
 			
 		case 8: 
 			personagem.set_NmClasse("Guardião");
-			personagem.set_TesteResistencia("Força" + "\n" + "Destreza");
-			cout << "O seu personagem é um Guardião."
+			personagem.set_TesteResistencia("Força""\n""Destreza");
+			cout << "O seu personagem é um Guardião.";
 			/* Parte de couts que definirão as carcterísticas do personagem
 			*/
 			break;
 			
 		case 9: 
 			personagem.set_NmClasse("Ladino");
-			personagem.set_TesteResistencia("Destreza" + "\n" + "Inteligência");
-			cout << "O seu personagem é um Ladino."
+			personagem.set_TesteResistencia("Destreza""\n""Inteligência");
+			cout << "O seu personagem é um Ladino.";
 			/* Parte de couts que definirão as carcterísticas do personagem
 			*/
 			break;
 		
 		case 10: 
 			personagem.set_NmClasse("Feiticeiro");
-			personagem.set_TesteResistencia("Constituição" + "\n" + "Carisma");
-			cout << "O seu personagem é um Feiticeiro."
+			personagem.set_TesteResistencia("Constituição""\n""Carisma");
+			cout << "O seu personagem é um Feiticeiro.";
 			/* Parte de couts que definirão as carcterísticas do personagem
 			*/
 			break;
 				
 		case 11: 
 			personagem.set_NmClasse("Bruxo");
-			personagem.set_TesteResistencia("Sabedoria" + "\n" + "Carisma");
-			cout << "O seu personagem é um Bruxo."
+			personagem.set_TesteResistencia("Sabedoria""\n""Carisma");
+			cout << "O seu personagem é um Bruxo.";
 			/* Parte de couts que definirão as carcterísticas do personagem
 			*/
 			break;
 			
 		case 12: 
 			personagem.set_NmClasse("Mago");
-			personagem.set_TesteResistencia("Inteligência" + "\n" + "Sabedoria");
-			cout << "O seu personagem é um Mago."
+			personagem.set_TesteResistencia("Inteligência""\n""Sabedoria");
+			cout << "O seu personagem é um Mago.";
 			/* Parte de couts que definirão as carcterísticas do personagem
 			*/
 			break;
@@ -194,4 +146,11 @@ void definirClassePersonagem(int CdClasse) {
 		default:
 			break;
 	}		
+}
+
+int setandoClasse() {
+	Classes classe;
+	classe.set_CdClasse(coutDefineClasse());
+	system("clear");
+	definirClassePersonagem(classe.get_CdClasse());
 }
